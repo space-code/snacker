@@ -7,7 +7,7 @@
 <a href="https://github.com/space-code/snacker"><img alt="CI" src="https://github.com/space-code/snacker/actions/workflows/ci.yml/badge.svg?branch=main"></a>
 
 ## Description
-`snacker` description.
+`snacker` is a lightweight Swift library for displaying snackbars in iOS applications.
 
 - [Usage](#usage)
 - [Requirements](#requirements)
@@ -19,7 +19,27 @@
 
 ## Usage
 
+```swift
+import Snackner
+
+Snacker.shared.action(
+    .snack(
+        view: view,
+        data: SnackbarData(
+            snackbarAlignment: .top(spacing: 20),
+            insets: .zero,
+            animationDuration: 0.25
+        )
+    ),
+    container: window
+)
+```
+
 ## Requirements
+
+- iOS 17.0+
+- Xcode 16.0
+- Swift 6.0
 
 ## Installation
 ### Swift Package Manager

@@ -100,9 +100,9 @@ extension SnackbarController {
                     guard let self else {
                         return
                     }
-                    NSLayoutConstraint.deactivate(self.disabledConstraints)
-                    NSLayoutConstraint.activate(self.activeConstraints)
-                    self.containerView.layoutIfNeeded()
+                    NSLayoutConstraint.deactivate(disabledConstraints)
+                    NSLayoutConstraint.activate(activeConstraints)
+                    containerView.layoutIfNeeded()
                 },
                 completion: { _ in
                     completion?()
@@ -127,8 +127,8 @@ extension SnackbarController {
                     guard let self else {
                         return
                     }
-                    NSLayoutConstraint.activate(self.disabledConstraints)
-                    self.containerView.layoutIfNeeded()
+                    NSLayoutConstraint.activate(disabledConstraints)
+                    containerView.layoutIfNeeded()
                 },
                 completion: { [weak self] _ in
                     self?.contentView.removeFromSuperview()

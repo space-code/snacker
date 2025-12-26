@@ -100,8 +100,8 @@ extension Snacker: ISnacker {
                 remove(controller: controller, id: hash)
             }
         case .removeAll:
-            (cachedViews[hash] ?? []).forEach {
-                remove(controller: $0, id: hash)
+            for item in cachedViews[hash] ?? [] {
+                remove(controller: item, id: hash)
             }
         default:
             break

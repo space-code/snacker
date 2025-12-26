@@ -4,6 +4,7 @@
 //
 
 import Foundation
+
 public enum SnackbarAlignment: Sendable {
     case top(spacing: CGFloat)
     case bottom(spacing: CGFloat)

@@ -29,7 +29,7 @@ jobs:
             xcode: "Xcode_16.1"
             runsOn: macOS-14
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: ${{ matrix.name }}
         run: xcodebuild test -scheme "Snacker" -destination "${{ matrix.destination }}" clean -enableCodeCoverage YES -resultBundlePath "test_output/${{ matrix.name }}.xcresult" || exit 1
       - uses: actions/upload-artifact@v4

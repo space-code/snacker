@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Miscellaneous Tasks
+- Remove dependabot
+  - Contributed by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#18](https://github.com/space-code/snacker/pull/18).
+- Automate code formatting and linting with git hooks
+  - Contributed by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#14](https://github.com/space-code/snacker/pull/14).
 - Add a configuration for renovate
   - Contributed by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#13](https://github.com/space-code/snacker/pull/13).
 - Switch from Makefile to Mise

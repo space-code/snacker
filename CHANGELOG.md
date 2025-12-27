@@ -12,6 +12,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Miscellaneous Tasks
+- Move the templates
+  - Contributed by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#23](https://github.com/space-code/snacker/pull/23).
 - Add CODEOWNERS
   - Contributed by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#22](https://github.com/space-code/snacker/pull/22).
 - Add GitHub issue and PR templates

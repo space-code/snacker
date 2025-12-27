@@ -12,6 +12,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Miscellaneous Tasks
+- Add release workflow
+  - Contributed by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#19](https://github.com/space-code/snacker/pull/19).
 - Remove dependabot
   - Contributed by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#18](https://github.com/space-code/snacker/pull/18).
 - Automate code formatting and linting with git hooks

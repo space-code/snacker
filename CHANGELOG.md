@@ -12,6 +12,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Miscellaneous Tasks
+- Add CODEOWNERS
+  - Contributed by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#22](https://github.com/space-code/snacker/pull/22).
 - Add GitHub issue and PR templates
   - Contributed by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#21](https://github.com/space-code/snacker/pull/21).
 - Add conventional-pr.yml for PR validation

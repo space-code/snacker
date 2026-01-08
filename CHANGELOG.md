@@ -38,7 +38,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Contributed by [@dependabot[bot]](https://github.com/dependabot[bot]) in Pull Request [#3](https://github.com/space-code/snacker/pull/3).
 
 ### New Contributors
-* @renovate[bot] made their first contribution in [#15](https://github.com/space-code/snacker/pull/15)
+* @renovate[bot] made their first contribution in [#24](https://github.com/space-code/snacker/pull/24)
 * @dependabot[bot] made their first contribution in [#3](https://github.com/space-code/snacker/pull/3)
 
 ## [1.0.0](https://github.com/space-code/snacker/releases/tag/1.0.0)

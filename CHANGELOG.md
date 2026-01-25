@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ---
 ## [Unreleased]
 
+### Documentation
+- Update `README.md`
+  - Documented by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#27](https://github.com/space-code/snacker/pull/27).
+
 ### Miscellaneous Tasks
 - Move the templates
   - Contributed by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#23](https://github.com/space-code/snacker/pull/23).
@@ -38,7 +42,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Contributed by [@dependabot[bot]](https://github.com/dependabot[bot]) in Pull Request [#3](https://github.com/space-code/snacker/pull/3).
 
 ### New Contributors
-* @renovate[bot] made their first contribution in [#26](https://github.com/space-code/snacker/pull/26)
+* @renovate[bot] made their first contribution in 
 * @dependabot[bot] made their first contribution in [#3](https://github.com/space-code/snacker/pull/3)
 
 ## [1.0.0](https://github.com/space-code/snacker/releases/tag/1.0.0)

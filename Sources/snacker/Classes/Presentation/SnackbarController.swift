@@ -96,13 +96,10 @@ extension SnackbarController {
                 withDuration: 0.5,
                 delay: .zero,
                 options: .curveEaseInOut,
-                animations: { [weak self] in
-                    guard let self else {
-                        return
-                    }
-                    NSLayoutConstraint.deactivate(disabledConstraints)
-                    NSLayoutConstraint.activate(activeConstraints)
-                    containerView.layoutIfNeeded()
+                animations: {
+                    NSLayoutConstraint.deactivate(self.disabledConstraints)
+                    NSLayoutConstraint.activate(self.activeConstraints)
+                    self.containerView.layoutIfNeeded()
                 },
                 completion: { _ in
                     completion?()
@@ -123,12 +120,9 @@ extension SnackbarController {
                 withDuration: 0.5,
                 delay: .zero,
                 options: .curveEaseInOut,
-                animations: { [weak self] in
-                    guard let self else {
-                        return
-                    }
-                    NSLayoutConstraint.activate(disabledConstraints)
-                    containerView.layoutIfNeeded()
+                animations: {
+                    NSLayoutConstraint.activate(self.disabledConstraints)
+                    self.containerView.layoutIfNeeded()
                 },
                 completion: { [weak self] _ in
                     self?.contentView.removeFromSuperview()

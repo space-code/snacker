@@ -34,14 +34,14 @@ jobs:
         run: |
           LAST_TAG=$(git tag -l | grep -E '^[0-9]+\.[0-9]+\.[0-9]+$' | sort -V | tail -n 1)
           if [ -z "$LAST_TAG" ]; then
-            echo "No previous Atomic releases found, will release"
+            echo "No previous Snacker releases found, will release"
             echo "has-changes=true" >> $GITHUB_OUTPUT
           else
             if [ -n "$(git diff --name-only ${LAST_TAG}..HEAD)" ]; then
-              echo "Atomic changes found since $LAST_TAG"
+              echo "Snacker changes found since $LAST_TAG"
               echo "has-changes=true" >> $GITHUB_OUTPUT
             else
-              echo "No Atomic changes since $LAST_TAG"
+              echo "No Snacker changes since $LAST_TAG"
               echo "has-changes=false" >> $GITHUB_OUTPUT
             fi
           fi
@@ -53,7 +53,7 @@ jobs:
         run: |
           NEXT_VERSION=$(git cliff --config ./cliff.toml --bumped-version)
           echo "NEXT_VERSION=$NEXT_VERSION" >> "$GITHUB_OUTPUT"
-          echo "Next Atomic version will be: $NEXT_VERSION"
+          echo "Next Snacker version will be: $NEXT_VERSION"
       - name: Update CHANGELOG.md
         if: steps.check-changes.outputs.has-changes == 'true'
         env:
@@ -62,7 +62,7 @@ jobs:
       - name: Update README.md version
         if: steps.check-changes.outputs.has-changes == 'true'
         run: |
-          sed -i -E 's|https://github.com/space-code/atomic.git", from: "[0-9]+\.[0-9]+\.[0-9]+"|https://github.com/space-code/atomic.git", from: "'"${{ steps.next-version.outputs.NEXT_VERSION }}"'"|g' README.md
+          sed -i -E 's|https://github.com/space-code/snacker.git", from: "[0-9]+\.[0-9]+\.[0-9]+"|https://github.com/space-code/snacker.git", from: "'"${{ steps.next-version.outputs.NEXT_VERSION }}"'"|g' README.md
           echo "Updated README.md with version ${{ steps.next-version.outputs.NEXT_VERSION }}"
       - name: Get release notes
         id: release-notes
@@ -89,13 +89,13 @@ jobs:
           commit_options: "--allow-empty --no-verify"
           tagging_message: ${{ steps.next-version.outputs.NEXT_VERSION }}
           skip_dirty_check: true
-          commit_message: "[Release] Atomic ${{ steps.next-version.outputs.NEXT_VERSION }}"
+          commit_message: "[Release] Snacker ${{ steps.next-version.outputs.NEXT_VERSION }}"
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         if: steps.check-changes.outputs.has-changes == 'true'
         with:
           draft: false
-          repository: space-code/atomic
+          repository: space-code/snacker
           name: ${{ steps.next-version.outputs.NEXT_VERSION }}
           tag_name: ${{ steps.next-version.outputs.NEXT_VERSION }}
           body: ${{ steps.release-notes.outputs.RELEASE_NOTES }}

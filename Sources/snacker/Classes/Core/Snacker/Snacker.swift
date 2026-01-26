@@ -51,13 +51,12 @@ public final class Snacker {
         inContainerView containerView: UIView,
         data: SnackbarData
     ) -> SnackbarController {
-        let controller = SnackbarController(
+        SnackbarController(
             contentView: view,
             containerView: containerView,
             alignment: data.snackbarAlignment,
             insets: data.insets
         )
-        return controller
     }
 }
 

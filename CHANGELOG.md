@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `1.0.x` Releases - [1.0.1](#101) | [1.0.0](#100)
 
 ---
+<!-- git-cliff: end of header -->
 
 
 ## [1.0.1](https://github.com/space-code/snacker/releases/tag/1.0.1)
